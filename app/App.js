@@ -1,8 +1,10 @@
+import { TasksController } from "./Controllers/TasksControllers.js";
 
 
 
 class App {
-  // valuesController = new ValuesController();
+  tasksController = new TasksController();
+
 }
 
 window["app"] = new App();

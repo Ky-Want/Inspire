@@ -6,10 +6,18 @@ import { loadState } from "./Utils/Store.js"
 
 
 class AppState extends EventEmitter {
-  /** @type {import('./Models/Value').Value[]} */
-  // values = loadState('values', Value)
+  /** @type {import('./Models/List').List[]} */
+  lists = []
+  activeList = null
+  // lists = loadState('lists', List)
 
 
+
+  /** @type {import('./Models/Task').Task[]} */
+  tasks = []
+  activeTask = null
+
+  // tasks = loadState('tasks', Task)
 }
 
 
