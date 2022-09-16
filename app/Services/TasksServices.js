@@ -21,6 +21,10 @@ class TasksService {
     appState.tasks = tasks
     saveState('tasks', appState.tasks)
   }
+
+
+
+
   createTask(newTask) {
     let task = new Task(newTask)
     console.log('new task', task);

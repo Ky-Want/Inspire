@@ -4,14 +4,16 @@ import { getFormData } from "../Utils/FormHandler.js"
 
 
 export class TasksController {
+
   constructor() { }
 
-  createTask(listId) {
+  createTask(taskId) {
+    console.log('creating task')
     try {
       window.event.preventDefault()
       const form = window.event.target
       let newTask = getFormData(form)
-      newTask.listId = listId
+      newTask.taskId = taskId
       tasksService.createTask(newTask)
     } catch (error) {
       console.log(error);
