@@ -1,1 +1,33 @@
 /* BASIC STYLES HERE */
+
+.hide {
+  display: none;
+}
+
+.displayStuff:hover+.hide {
+  display: block;
+  color: white;
+}
+
+
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.weatherCard {
+  background-color: rgba(206, 204, 204, 0.812);
+  backdrop-filter: blur(50px);
+}
+
+.todoCard {
+  background-color: rgba(206, 204, 204, 0.812);
+  backdrop-filter: blur(50px);
+}
+
+.catbg {
+  background-image: url('https://www.stuffmirror.com/wp-content/uploads/2013/08/Shiny-Forest-Wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
