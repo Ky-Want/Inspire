@@ -1,27 +1,24 @@
-import { generateId } from "../Utils/generateId.js";
-
-
 export class Task {
   constructor(data) {
-    this.id = data.id || generateId
+    this.id = data.id
+    this.user = data.user
     this.description = data.description
-    this.taskId = data.taskId
-    this.task = data.task
+    this.completed = data.completed
+
   }
 
 
 
 
-
-  get Template() {
+  get TasksTemplate() {
     return /* HTML */ `
-      <div class="d-flex justify-content-between">
-        <input onchange="app.tasksController.toggleTask('${this.id}')" class="ms-2" type="checkbox" ${this.task ? 'checked' : ''}>
-
-        ${this.description}
-
-        <i onclick="app.tasksController.deleteTask('${this.id}')" class="mdi mdi-close selectable"></i>
+    <div class="d-flex justify-content-between">
+      <input onchange="app.tasksController.toggleTask('${this.id}')" class="ms-2" type="checkbox" ${this.completed ? 'checked' : ''}>
+      <div>
+      ${this.description}
       </div>
+      <i onclick="app.tasksController.deleteTask('${this.id}')" class="mdi mdi-close selectable"></i>
+    </div>
     `
   }
 }
