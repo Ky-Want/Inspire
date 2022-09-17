@@ -13,6 +13,6 @@ function drawClock() {
 export class ClocksControllers {
   constructor() {
     appState.on('clock', drawClock)
-    console.log('hello from clocks controller')
+    // console.log('hello from clocks controller')
   }
 }

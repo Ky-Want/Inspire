@@ -12,11 +12,19 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Clock').Clock[]} */
   clock = []
+  activeClock = null
 
 
 
   /**@type {import('./Models/Quote').Quote[]} */
   quotes = []
+  activeQuote = null
+
+
+
+  /**@type {import('./Models/Image').Image[]} */
+  images = []
+  activeImage = null
 }
 
 

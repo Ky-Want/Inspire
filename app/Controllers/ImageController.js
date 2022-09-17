@@ -1,0 +1,6 @@
+
+
+
+function drawBgImage() {
+  let image
+}
