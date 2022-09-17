@@ -1,6 +1,5 @@
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
-import { loadState } from "./Utils/Store.js"
 
 
 
@@ -13,6 +12,11 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Clock').Clock[]} */
   clock = []
+
+
+
+  /**@type {import('./Models/Quote').Quote[]} */
+  quotes = []
 }
 
 

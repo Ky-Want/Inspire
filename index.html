@@ -60,7 +60,7 @@
     <div class="container-fluid">
       <div class="col-12 mt-5 pt-5 d-flex justify-content-center fs-1 text-light" id="clock">
         <strong>
-          <span id="time">0</span>
+          <span id="time">8:37</span>
         </strong>
       </div>
     </div>
@@ -74,12 +74,6 @@
 
   <footer>
     <!-- SECTION: todo list form -->
-    <!-- TODO: when adding a todo, page does NOT reload -->
-    <!-- TODO: todo's can be added (post), removed (DELETE), and marked complete (PUT) -->
-    <!-- TODO: deleting a todo requires confirmation -->
-    <!-- TODO: todo's are rendered on reload -->
-    <!-- TODO: completed todo's have a style indication or checkbox that will persist on reload. HINT: checked attribute -->
-    <!-- TODO: todo's list includes an up to date count of all uncompleted tasks (refresh NOT required) -->
     <section class="container flex-end">
       <div class="card todoCard">
         <div class="card-body">
@@ -113,17 +107,15 @@
 
 
     <!-- SECTION: quote -->
-    <!-- TODO: hover reveals author -->
-
-    <div class="d-flex justify-content-center text-light fs-5 displayStuff mb-5">
-      <strong>"you can't shake hands with a closed fist"</strong>
+    <div class="d-flex justify-content-center text-light fs-5 displayStuff mb-5 selectable">
+      <strong><span id="quote">"Scars tell a story. They are reminders of when life tried to break you but
+          failed."</span></strong>
     </div>
 
-
+    <!-- SECTION: author -->
     <div class="hide">
-      <div class="d-flex justify-content-center">author name</div>
+      <div class="d-flex justify-content-center"><span id="autor">-Sophistify Life</span></div>
     </div>
-
   </footer>
 
 
