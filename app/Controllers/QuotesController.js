@@ -5,34 +5,39 @@ import { setHTML, setText } from "../Utils/Writer.js";
 
 
 // FIXME the data type for the quote should be an object, so we shouldn't need to foreach here
-// FIXME make sure we are targeting the correct property in the appstate as well
+// FIXME make sure we are targeting the correct property in the appState as well
 function drawQuote() {
-  let template = ''
-  appState.quotes.forEach(t => template += t.quoteTemplate)
-  setText('quote', template)
+  let quote = appState.activeQuote
+
+  setHTML('quote', appState.activeQuote)
+  console.log('Here is the quote', quote);
 }
+
+
+
+
 function drawAuthor() {
-  let template = ''
-  appState.quotes.forEach(t => template += t.authorTemplate)
-  setText('author', template)
+  let author = appState.activeQuote
+
+  setHTML('author', appState.activeQuote)
+  console.log('Here is the author', author);
 }
 
 
 
 export class QuotesController {
   constructor() {
-    this.getQuotes()
-    appState.on('quotes', drawQuote)
-    drawQuote()
-    drawAuthor()
+    this.getQuote()
+    appState.on('activeQuote', drawQuote)
+    appState.on('activeQuote', drawAuthor)
   }
 
 
 
 
-  async getQuotes() {
+  async getQuote() {
     try {
-      await quotesService.getQuotes()
+      await quotesService.getQuote()
     } catch (error) {
       console.error('[GetQuotes]', error)
       Pop.error(error)

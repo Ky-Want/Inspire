@@ -9,7 +9,6 @@ function drawBgImage() {
   let image = appState.activeImage
   console.log('Here is the image', image);
   document.querySelector('body').style.backgroundImage = `url(${image.largeImgUrl})`
-  // setHTML('imgLocation', image.largeImgUrl)
 }
 
 
@@ -19,7 +18,6 @@ export class ImageController {
   constructor() {
     this.getRandomImage()
     appState.on('activeImage', drawBgImage)
-    // drawBgImage()
   }
 
 

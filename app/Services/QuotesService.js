@@ -5,12 +5,10 @@ import { SandboxServer } from "./AxiosServices.js"
 
 
 class QuotesService {
-  async getQuotes() {
+  async getQuote() {
     const res = await SandboxServer.get('/api/quotes')
-    console.log(res.data);
 
     appState.activeQuote = new Quote(res.data)
-    console.log('appState: ', appState.quotes);
   }
 
 
