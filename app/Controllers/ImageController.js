@@ -7,17 +7,10 @@ import { setHTML, setText } from "../Utils/Writer.js";
 
 function drawBgImage() {
   let image = appState.activeImage
+  console.log('Here is the image', image);
   document.querySelector('body').style.backgroundImage = `url(${image.largeImgUrl})`
-  setHTML('ImgLocation', image.largeImgUrl)
+  // setHTML('imgLocation', image.largeImgUrl)
 }
-
-
-
-// function drawBgImage() {
-//   let template = ''
-//   appState.images.forEach(i => template += i.imageTemplate)
-//   setHTML('imgLocation', template)
-// }
 
 
 
@@ -25,8 +18,8 @@ function drawBgImage() {
 export class ImageController {
   constructor() {
     this.getRandomImage()
-    appState.on('images', drawBgImage)
-    drawBgImage()
+    appState.on('activeImage', drawBgImage)
+    // drawBgImage()
   }
 
 

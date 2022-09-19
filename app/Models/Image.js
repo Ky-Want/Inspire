@@ -12,7 +12,7 @@ export class Image {
 
   get imageTemplate() {
     return /* HTML */ `
-    <body class="bg" id="${this.largeImgUrl}">
+    <body id="${this.largeImgUrl}">
     `
   }
 }

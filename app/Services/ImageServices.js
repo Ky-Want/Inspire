@@ -10,7 +10,7 @@ class ImageServices {
     console.log(res.data);
 
     appState.activeImage = new Image(res.data)
-    console.log('appState: ', appState.images);
+    // console.log('appState: ', appState.images);
   }
 
 

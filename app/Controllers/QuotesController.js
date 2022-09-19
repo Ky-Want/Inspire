@@ -4,7 +4,8 @@ import { Pop } from "../Utils/Pop.js";
 import { setHTML, setText } from "../Utils/Writer.js";
 
 
-
+// FIXME the data type for the quote should be an object, so we shouldn't need to foreach here
+// FIXME make sure we are targeting the correct property in the appstate as well
 function drawQuote() {
   let template = ''
   appState.quotes.forEach(t => template += t.quoteTemplate)

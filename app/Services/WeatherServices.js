@@ -1,0 +1,1 @@
+// FIXME go and hit your endpoint to get the weather data. Store it in your AppState and that should get the API Data requirement

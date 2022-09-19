@@ -24,7 +24,7 @@
 <!-- TODO: todo list must be positioned over image. no tiling or warping -->
 
 
-<body id="imgLocation">
+<body class="bg" id="imgLocation">
   <!-- SECTION: weather card -->
   <!-- TODO: onclick toggle thing to flip to display either celsius and fahrenheit -->
   <header class="container">
@@ -32,15 +32,15 @@
       <div class="card elevation-3 weatherCard">
         <div class="card-body">
           <div class="d-flex justify-content-center mb-1">
-            26*c
+            <span>26*c</span>
           </div>
 
           <div class="d-flex justify-content-center mb-1">
-            Sunny
+            <span>Sunny</span>
           </div>
 
           <div class="d-flex justify-content-center">
-            <i>sun icon</i>
+            <span><i>sun icon</i></span>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
     <!-- TODO: make it work like an actual clock -->
     <!-- TODO: include hour and minutes, make them update accordingly -->
     <div class="container-fluid">
-      <div class="col-12 mt-5 pt-5 d-flex justify-content-center fs-1 text-dark" id="clock">
+      <div class="col-12 mt-5 pt-5 d-flex justify-content-center fs-1 text-light" id="clock">
         <strong>
           <span id="time">8:37</span>
         </strong>
@@ -106,7 +106,7 @@
 
     <!-- SECTION: quote -->
     <div class="d-flex justify-content-center text-light fs-5 mb-4 mt-5 p-1 displayStuff">
-      <strong><span id="quote" onload="app.quotesController.getQuotes()">
+      <strong><span id="quote">
           <!-- "Scars tell a story. They are reminders of when life tried to break you but failed." -->
         </span></strong>
     </div>
