@@ -12,9 +12,11 @@
 export class Weather {
   constructor(data) {
     this.id = data.id
-    this.temp = data.temp
-    this.isCelsius = true
-    this.isFahrenheit = true
+    this.temp = data.main.temp
+    // TODO look up the formula for converting kelvin to fahrenheit and do same thing for celsius
+    this.fahrenheit = data.main.temp - 273.15 * 9 % 5 + 32
+    this.celsius = data.celsius.temp - 273.15
+    this.isFahrenheit = data.isFahrenheit || false
   }
 
 
@@ -23,7 +25,7 @@ export class Weather {
   get Temperature() {
     return /* HTML */ `
     <div class="d-flex justify-content-center mb-1">
-      <strong><span id="temp">${this.temp}</span></strong>
+      <strong><span id="temp">${this.fahrenheit}</span></strong>
     </div>
     `
   }

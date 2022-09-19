@@ -8,7 +8,7 @@ import { setHTML } from "../Utils/Writer.js";
 
 function drawTemp() {
   let weather = appState.activeWeather
-  setHTML('temp', appState.activeWeather)
+  setHTML('temp', appState.activeWeather.fahrenheit)
   console.log('Here is the temp', weather);
 }
 

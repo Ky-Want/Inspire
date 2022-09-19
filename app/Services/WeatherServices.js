@@ -10,15 +10,16 @@ class WeatherService {
   async getWeather() {
     const res = await SandboxServer.get('api/weather')
     appState.activeWeather = new Weather(res.data)
+    console.log('get weather', res.data);
   }
 
 
 
 
   setActiveWeather(id) {
-    const cel = appState.weather.find(w => w.isCelsius == id)
+    const cel = appState.weather.find(w => w.isFahrenheit == id)
     if (!cel) {
-      appState.activeWeather = cel.isFahrenheit
+      appState.activeWeather = cel.fahrenheit
     }
   }
 }

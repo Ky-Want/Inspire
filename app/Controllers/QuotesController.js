@@ -9,7 +9,7 @@ import { setHTML, setText } from "../Utils/Writer.js";
 function drawQuote() {
   let quote = appState.activeQuote
 
-  setHTML('quote', appState.activeQuote)
+  setHTML('quote', appState.activeQuote.content)
   console.log('Here is the quote', quote);
 }
 
@@ -19,7 +19,7 @@ function drawQuote() {
 function drawAuthor() {
   let author = appState.activeQuote
 
-  setHTML('author', appState.activeQuote)
+  setHTML('author', appState.activeQuote.author)
   console.log('Here is the author', author);
 }
 
