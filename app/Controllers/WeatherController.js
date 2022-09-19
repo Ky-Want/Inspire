@@ -8,22 +8,22 @@ import { setHTML } from "../Utils/Writer.js";
 
 function drawTemp() {
   let weather = appState.activeWeather
-  setHTML('temp', appState.activeWeather.fahrenheit)
+  setHTML('temp', appState.activeWeather.temp)
   console.log('Here is the temp', weather);
 }
 
 
 export class WeatherController {
   constructor() {
-    this.getTemp()
+    this.flipWeatherCard()
     appState.on('activeWeather', drawTemp)
   }
 
 
 
-  async getTemp() {
+  async flipWeatherCard() {
     try {
-      await weatherService.getWeather()
+      await weatherService.flipWeatherCard()
     } catch (error) {
       console.error('get temp', error)
       Pop.error(error)

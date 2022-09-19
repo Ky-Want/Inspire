@@ -10,7 +10,7 @@ function drawQuote() {
   let quote = appState.activeQuote
 
   setHTML('quote', appState.activeQuote.content)
-  console.log('Here is the quote', quote);
+  // console.log('Here is the quote', quote);
 }
 
 
@@ -20,7 +20,7 @@ function drawAuthor() {
   let author = appState.activeQuote
 
   setHTML('author', appState.activeQuote.author)
-  console.log('Here is the author', author);
+  // console.log('Here is the author', author);
 }
 
 

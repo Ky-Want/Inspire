@@ -7,7 +7,7 @@ import { setHTML, setText } from "../Utils/Writer.js";
 
 function drawBgImage() {
   let image = appState.activeImage
-  console.log('Here is the image', image);
+  // console.log('Here is the image', image);
   document.querySelector('body').style.backgroundImage = `url(${image.largeImgUrl})`
 }
 

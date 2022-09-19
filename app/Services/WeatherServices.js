@@ -7,10 +7,12 @@ import { SandboxServer } from "./AxiosServices.js";
 
 
 class WeatherService {
-  async getWeather() {
+  async flipWeatherCard(id) {
     const res = await SandboxServer.get('api/weather')
     appState.activeWeather = new Weather(res.data)
-    console.log('get weather', res.data);
+
+
+    // console.log('get weather', res.data);
   }
 
 
