@@ -7,12 +7,12 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
   /** @type {import('./Models/Task').Task[]} */
   tasks = []
-  activeTask = null
+  // activeTask = null
 
 
   /** @type {import('./Models/Clock').Clock[]} */
   clock = []
-  activeClock = null
+  // activeClock = null
 
 
 
@@ -28,9 +28,9 @@ class AppState extends EventEmitter {
 
 
 
-  // /**@type {import('./Models/Weather').Weather []} */
-  // weather = []
-  // activeWeather = null
+  /**@type {import('./Models/Weather').Weather []} */
+  weather = []
+  activeWeather = null
 }
 
 

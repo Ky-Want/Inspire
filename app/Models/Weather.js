@@ -8,3 +8,23 @@
 // this.isCelsius = true
 
 // FIXME you will need a method to toggle this bool between true and false, and figure out how to display that based on the bool.
+
+export class Weather {
+  constructor(data) {
+    this.id = data.id
+    this.temp = data.temp
+    this.isCelsius = true
+    this.isFahrenheit = true
+  }
+
+
+
+
+  get Temperature() {
+    return /* HTML */ `
+    <div class="d-flex justify-content-center mb-1">
+      <strong><span id="temp">${this.temp}</span></strong>
+    </div>
+    `
+  }
+}
