@@ -22,9 +22,15 @@ class AppState extends EventEmitter {
 
 
 
-  /**@type {import('./Models/Image').Image[]} */
+  /**@type {import('./Models/Image').Image []} */
   images = []
   activeImage = null
+
+
+
+  // /**@type {import('./Models/Weather').Weather []} */
+  // weather = []
+  // activeWeather = null
 }
 
 

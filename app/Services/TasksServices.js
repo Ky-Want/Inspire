@@ -33,7 +33,6 @@ class TasksService {
       throw new Error('That is a bad Id')
     }
     appState.activeTask = task
-    console.log('the active task', appState.activeTask)
   }
 
 
@@ -52,7 +51,6 @@ class TasksService {
 
   async createTask(formData) {
     const res = await SandboxServer.post('/api/KY/todos', formData)
-    console.log('task response: ', res.data);
 
     let task = new Task(res.data)
     appState.tasks = [...appState.tasks, task]

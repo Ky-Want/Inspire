@@ -24,7 +24,7 @@
 <!-- TODO: todo list must be positioned over image. no tiling or warping -->
 
 
-<body class="bg">
+<body id="imgLocation">
   <!-- SECTION: weather card -->
   <!-- TODO: onclick toggle thing to flip to display either celsius and fahrenheit -->
   <header class="container">
@@ -58,7 +58,7 @@
     <!-- TODO: make it work like an actual clock -->
     <!-- TODO: include hour and minutes, make them update accordingly -->
     <div class="container-fluid">
-      <div class="col-12 mt-5 pt-5 d-flex justify-content-center fs-1 text-light" id="clock">
+      <div class="col-12 mt-5 pt-5 d-flex justify-content-center fs-1 text-dark" id="clock">
         <strong>
           <span id="time">8:37</span>
         </strong>
@@ -74,6 +74,7 @@
 
   <footer>
     <!-- SECTION: todo list form -->
+    <!-- NOTE: complete -->
     <section class="container flex-end">
       <div class="card todoCard">
         <div class="card-body">
@@ -103,18 +104,18 @@
 
 
 
-
-
-
     <!-- SECTION: quote -->
-    <div class="d-flex justify-content-center text-light fs-5 displayStuff pb-5">
-      <strong><span id="quote">"Scars tell a story. They are reminders of when life tried to break you but
-          failed."</span></strong>
+    <div class="d-flex justify-content-center text-light fs-5 mb-4 mt-5 p-1 displayStuff">
+      <strong><span id="quote" onload="app.quotesController.getQuotes()">
+          <!-- "Scars tell a story. They are reminders of when life tried to break you but failed." -->
+        </span></strong>
     </div>
 
     <!-- SECTION: author -->
     <div class="hide">
-      <div class="d-flex justify-content-center"><span id="author">-Sophistify Life</span></div>
+      <div class="d-flex justify-content-center"><span id="author">
+          <!-- -Sophistify Life -->
+        </span></div>
     </div>
   </footer>
 

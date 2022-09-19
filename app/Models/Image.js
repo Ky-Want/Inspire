@@ -1,17 +1,18 @@
 export class Image {
   constructor(data) {
-    this.url = data.url
-    this.imgUrl = data.imgUrl
+    this.id = data.id
     this.largeImgUrl = data.largeImgUrl
+    this.tags = data.tags
+    this.author = data.author
+    this.query = data.query
   }
 
 
 
 
-
-  // get ImageTemplate(){
-  //   return /* HTML */ `
-
-  //   `
-  // }
+  get imageTemplate() {
+    return /* HTML */ `
+    <body class="bg" id="${this.largeImgUrl}">
+    `
+  }
 }
