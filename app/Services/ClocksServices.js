@@ -6,4 +6,5 @@ class ClocksServices {
 }
 
 
-export const clocksServices = new ClocksServices()
+export const clocksServices = new ClocksServices(
+)
