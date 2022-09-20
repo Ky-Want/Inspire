@@ -15,11 +15,11 @@ function drawClock() {
   // appState.clock.forEach(c => template += c.ClockTemplate)
   // setHTML('clock', new Date())
 
-  // const event = new Date('August 19, 1975 23:15:30 GMT+00:00');
+  const event = new Date('August 19, 1975 23:15:30 GMT+00:00');
 
-  // setText('time', appState.activeClock.event.toLocaleTimeString('en-US'))
+  setText('time', appState.activeClock.event.toLocaleTimeString('en-US'))
 
-  // console.log('time: ');
+  console.log('time: ');
 }
 
 
