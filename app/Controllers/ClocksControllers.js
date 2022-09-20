@@ -25,20 +25,20 @@ function drawClock() {
 
 export class ClocksControllers {
   constructor() {
-    // this.getTime()
-    // appState.on('clock', drawClock)
-    // console.log('hello from clocks controller')
+    this.getTime()
+    appState.on('clock', drawClock)
+    console.log('hello from clocks controller')
   }
 
 
 
 
-  // async getTime() {
-  //   try {
-  //     await clocksServices.getTime()
-  //   } catch (error) {
-  //     console.error('[get random image controller]', error);
-  //     Pop.error(error.message)
-  //   }
-  // }
+  async getTime() {
+    try {
+      await clocksServices.getTime()
+    } catch (error) {
+      console.error('[get random image controller]', error);
+      Pop.error(error.message)
+    }
+  }
 }
