@@ -15,18 +15,18 @@ function drawClock() {
   // appState.clock.forEach(c => template += c.ClockTemplate)
   // setHTML('clock', new Date())
 
-  const event = new Date('August 19, 1975 23:15:30 GMT+00:00');
+  // const event = new Date('August 19, 1975 23:15:30 GMT+00:00');
 
-  setText('time', new Date())
+  // setText('time', appState.activeClock.event.toLocaleTimeString('en-US'))
 
-  console.log(event.toLocaleTimeString('en-US'));
+  // console.log('time: ');
 }
 
 
 export class ClocksControllers {
   constructor() {
     // this.getTime()
-    appState.on('clock', drawClock)
+    // appState.on('clock', drawClock)
     // console.log('hello from clocks controller')
   }
 

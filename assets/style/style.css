@@ -1,11 +1,12 @@
 /* BASIC STYLES HERE */
 
 .hide {
-  color: transparent;
+  display: none;
 }
 
 .displayStuff:hover+.hide {
   color: white;
+  display: block;
 }
 
 

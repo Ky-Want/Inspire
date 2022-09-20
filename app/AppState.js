@@ -12,7 +12,7 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Clock').Clock[]} */
   clock = []
-  // activeClock = null
+  activeClock = null
 
 
 

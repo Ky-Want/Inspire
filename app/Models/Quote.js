@@ -21,7 +21,7 @@ export class Quote {
   get authorTemplate() {
     return /* HTML */ `
     <div class="hide">
-      <div class="d-flex justify-content-center"><span id="author">-${this.author}</span></div>
+      <div class=" justify-content-center"><span id="author">-${this.author}</span></div>
     </div>
     `
   }
