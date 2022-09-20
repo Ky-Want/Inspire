@@ -1,6 +1,7 @@
 export class Clock {
   constructor(data) {
-    this.timezone = data.timezone
+    this.id = data.id
+    this.time = data.time
   }
 
 
@@ -9,7 +10,7 @@ export class Clock {
   get ClockTemplate() {
     return /* HTML */ `
     <strong>
-      <span id="time">${this.timezone}</span>
+      <span id="time">${this.time}</span>
     </strong>
   `
   }
